@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Burak Colak – Data Analytics Portfolio</title>
+<meta name="description" content="Burak Colak, aspiring data analyst and computer science student. SQL, Excel, data visualization, and Java test automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7fa;--card:#ffffff;--fg:#10141f;--muted:#566074;--border:#dde1ea;
+  --accent:#00866b;--accent2:#4f52d6;--chip:#eef1f6;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0a0e17;--card:#151c2b;--fg:#f4f6fa;--muted:#9aa4b8;--border:#2a3248;
+  --accent:#00d4aa;--accent2:#8b8df5;--chip:#1e2740;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0a0e17;--card:#151c2b;--fg:#f4f6fa;--muted:#9aa4b8;--border:#2a3248;
+  --accent:#00d4aa;--accent2:#8b8df5;--chip:#1e2740;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Space Grotesk','Inter',system-ui,sans-serif;line-height:1.15}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;gap:6px 22px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.08em;font-size:.95rem;text-decoration:none}
+.links{display:flex;gap:18px;flex-wrap:wrap}
+.links a{font-size:.85rem;color:var(--muted);text-decoration:none}
+.links a:hover{color:var(--accent)}
+.hero{padding:72px 0 56px}
+.eyebrow{color:var(--accent);font-weight:600;font-size:.9rem;letter-spacing:.04em}
+.hero h1{font-size:clamp(2.4rem,9vw,4rem);margin:10px 0 16px}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);max-width:600px;font-size:1.05rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid var(--border);background:var(--card)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#04120e}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .2s}
+section{padding:52px 0;border-top:1px solid var(--border)}
+h2{font-size:1.6rem;margin-bottom:22px}
+.lead{color:var(--muted);max-width:700px}
+.focus{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.focus span,.tag{background:var(--chip);border-radius:999px;padding:5px 13px;font-size:.8rem;color:var(--fg)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card h3{font-size:1.1rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.92rem}
+.num{font-family:'Space Grotesk',sans-serif;color:var(--accent);font-weight:700;font-size:.85rem;margin-bottom:12px;display:block}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.tag{font-size:.75rem;color:var(--muted)}
+.more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:.9rem;text-decoration:none}
+.more:hover{text-decoration:underline}
+.meta{color:var(--accent);font-weight:500;font-size:.9rem;margin-bottom:2px}
+.when{color:var(--muted);font-size:.82rem;margin-bottom:12px}
+.skill-title{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--border);background:var(--card);padding:7px 15px;border-radius:999px;font-size:.88rem}
+footer{padding:34px 0 48px;border-top:1px solid var(--border);color:var(--muted);font-size:.82rem;text-align:center}
+@media (max-width:560px){.hero{padding-top:48px}.links{display:none}nav .wrap{justify-content:center}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top">BURAK COLAK</a>
+  <div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="eyebrow">Aspiring Data Analyst.</div>
+  <h1>Hi, I’m <span>Burak.</span></h1>
+  <p>I turn raw data into clear answers using SQL, Excel, and visualization, and I bring a software-testing background in Java to keep my work accurate and repeatable.</p>
+  <div class="btns">
+    <a class="btn primary" href="#projects">View my projects</a>
+    <a class="btn" href="https://www.linkedin.com/in/burak-colak00" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/burakcolak00" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <h2>About me</h2>
+  <p class="lead">I'm working toward my Computer Science degree while building a career in data analytics through the Year Up United Data Analytics program. I enjoy turning complex, messy data into insights that teams can act on, whether through sales analysis, reporting, or process improvement. My background in software testing and data analytics has strengthened both my analytical thinking and attention to detail, while helping me develop into a versatile problem solver who is always eager to learn. Outside of work, I enjoy playing chess and watching soccer, both of which help keep my strategic thinking sharp.
+</p>
+  <div class="focus"><span>Data analysis</span><span>Dashboards &amp; visualization</span><span>Spreadsheet modeling</span><span>Test automation</span></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Technical skills</h2>
+  <div class="grid">
+    <div><div class="skill-title">Data analytics</div><div class="chips"><span>SQL</span><span>Excel</span><span>Data Visualization</span></div></div>
+    <div><div class="skill-title">Programming</div><div class="chips"><span>Python</span><span>Java</span></div></div>
+    <div><div class="skill-title">Testing &amp; tools</div><div class="chips"><span>Cucumber BDD</span><span>Maven</span><span>Git &amp; GitHub</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Featured projects</h2>
+  <div class="grid">
+    <article class="card">
+      <span class="num">01</span>
+      <h3>EmporiUm Sales Territory Analysis</h3>
+      <p>Analysis of sales performance across regions to improve how territories and resources are distributed.</p>
+      <div class="tags"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Data Visualization</span></div>
+      <a class="more" href="https://github.com/burakcolak00/Capstone_1" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    <article class="card">
+      <span class="num">02</span>
+      <h3>ConciliumXcel Test Automation</h3>
+      <p>A Cucumber BDD test automation framework built for the Conciliumxcel – Bootflow Academy SDET internship. Tests are written as readable scenarios and run with Maven.</p>
+      <div class="tags"><span class="tag">Java</span><span class="tag">Cucumber BDD</span><span class="tag">Maven</span></div>
+      <a class="more" href="https://github.com/burakcolak00/ConciliumXcel_Task" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    <article class="card">
+      <span class="num">03</span>
+      <h3>Bahorettine Derlands</h3>
+      <p>Real estate dashboard and property analysis platform.</p>
+      <div class="tags"><span class="tag">React</span><span class="tag">Tableau</span><span class="tag">Data Viz</span></div>
+      <a class="more" href="https://bahorettinederlands.com/" target="_blank" rel="noopener">Visit site →</a>
+    </article>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education &amp; training</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Associate in Engineering Science</h3>
+      <div class="meta">Harper College · Computer Science focus</div>
+      <div class="when">2020 – 2022</div>
+      <p>Coursework in mathematics, statistics, and computer science, with early programming in Python and Java.</p>
+    </div>
+    <div class="card">
+      <h3>Data Analytics Professional Track</h3>
+      <div class="meta">Year Up United</div>
+      <div class="when">2024 – Present</div>
+      <p>Training in SQL, Python, and data visualization, with hands-on business cases and career coaching.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Let’s connect</h2>
+  <p class="lead">Open to data analyst opportunities and internships. The fastest way to reach me is LinkedIn.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://www.linkedin.com/in/burak-colak00" target="_blank" rel="noopener">Message me on LinkedIn</a>
+    <a class="btn" href="https://github.com/burakcolak00" target="_blank" rel="noopener">github.com/burakcolak00</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Burak Colak · Data Analytics Portfolio</div></footer>
+</body>
+</html>
